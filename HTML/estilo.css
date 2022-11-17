@@ -1,0 +1,16 @@
+section{
+    background-color: grey;
+    margin: auto;
+    border-radius: 15px;
+    padding: 15px;
+    width: 500px;
+    
+}
+body{
+    background-color: white;
+    font: normal 17pt arial;
+    
+}
+#p1{
+    color: blue;
+}

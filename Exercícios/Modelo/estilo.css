@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(40, 40, 95);
+    font: normal 15pt arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+    font-style: oblique;
+}
+
+section{
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: oblique;
+}
