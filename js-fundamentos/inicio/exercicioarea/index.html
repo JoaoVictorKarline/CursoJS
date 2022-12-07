@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de um círculo</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        html, body, main{
+            height: 100vh;
+            width: 100vw;
+            background-color: lightgray;
+        }
+
+        div#contain{
+            height: 600px;
+            width: 500px;
+            padding-top: 50px;
+            background-color: #d3d3d3;
+            margin: auto;
+        }
+
+        #circulo{
+            margin: auto;
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            margin-bottom: 30px;
+            border-radius: 50%;
+        }
+
+        input{
+            display: block;
+            margin: auto;
+            height: 50px;
+            width: 70%;
+            margin-top: 10px;
+        }
+
+        p{
+            
+            margin: auto;
+            padding: 25px;
+            text-align: center;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <main>
+        <div id="contain">
+            <div id="circulo"></div>
+            <input type="number" name="numero" id="inumero" placeholder="Raio do Círculo" autocomplete="off">
+            <input type="button" value="OK" onclick="area()">
+            <p id="res">A área do Círculo é:</p>
+        </div>
+    </main>
+
+    <script>
+        
+        function area(){
+            
+            const pi = Math.PI
+            let raio = document.getElementById('inumero')
+            let raio_ = raio.value
+            let res = document.getElementById('res')
+            res.innerHTML = 'A área do Círculo é: '
+            const area = pi * (raio_**2)
+            res.innerHTML += area
+           
+        }
+        
+    </script>
+</body>
+</html>

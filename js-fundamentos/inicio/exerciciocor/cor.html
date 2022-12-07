@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        html, body, main{
+            height: 100vh;
+            width: 100vw;
+            background-color: lightgray;
+        }
+
+        div#contain{
+            height: 600px;
+            width: 500px;
+            padding-top: 50px;
+            background-color: #d3d3d3;
+            margin: auto;
+        }
+
+        div#caixa{
+            margin: auto;
+            height: 400px;
+            width: 350px;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.432);
+        }
+
+        input{
+            display: block;
+            margin: auto;
+            height: 50px;
+            width: 70%;
+            margin-top: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <main>
+            <div id="contain">
+                <div id="caixa"></div>
+                <input type="text" name="cor" id="icor" placeholder="Informe uma cor">
+                <input type="button" value="OK" onclick="cor()">
+            </div>
+    </main>
+
+    <script>
+        function cor(){
+            let cor = document.getElementById('icor')
+            let cor_ = cor.value
+            if(cor_ == 'Azul' || cor_ == 'azul'){
+                caixa.style.background = 'blue'
+            }
+            if(cor_ == 'Amarelo' || cor_ == 'amarelo'){
+                caixa.style.background = 'yellow'
+            }
+            if(cor_ == 'Vermelho' || cor_ == 'vermelho'){
+                caixa.style.background = 'red'
+            }
+            if(cor_ == 'Verde' || cor_ == 'verde'){
+                caixa.style.background = 'green'
+            }
+            if(cor_ == 'Roxo' || cor_ == 'roxo'){
+                caixa.style.background = 'purple'
+            }
+        }
+    </script>
+</body>
+</html>
