@@ -1,7 +1,7 @@
 let a = 20
 
 a = a+20
-a += +4
+a += 4
 a++
 console.log(a)
 
