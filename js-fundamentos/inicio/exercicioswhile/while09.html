@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição</title>
+</head>
+<body>
+    <script>
+        let nome = window.prompt('Insira seu nome')
+        let senha = window.prompt('Insira uma senha')
+
+        nome.toLowerCase()
+        senha.toLowerCase()
+        
+        while(nome == senha){
+            window.alert('Senha Não pode ser igual ao nome')
+            nome = window.prompt('Insira seu nome')
+            senha = window.prompt('Insira uma senha')
+        }
+
+        alert('Cadastrado')
+    </script>
+</body>
+</html>
