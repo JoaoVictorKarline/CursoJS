@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <script>
+        let opt = prompt('Escolha uma operação para reaizar (R) Sacar dinheiro | (D) Depositar (S) Sair')
+        let total = 0
+
+        while (opt != 's') {
+        
+            if (opt.toLowerCase() != 's' && opt.toLowerCase() != 'd' && opt.toLowerCase() != 'r') {
+                alert('Opção Inválida')
+            } else {
+                
+                function sacar() {
+                    let valor = Number(prompt('Insira a quantia que você quer Sacar'))
+                    if (total < valor) {
+                        alert('Não foi Possível realizar essa operação')
+                    } else {
+                        total = total - valor
+                        alert(`Você sacou R$${valor} e seu novo saldo é de ${total}`)
+                    }
+                }
+
+                function depositar() {
+                    let valor = Number(prompt('Insira a Quantia que você quer depositar'))
+                    total += valor
+                    alert(`Seu novo Saldo é de ${total}`)
+                }
+
+
+                if(opt.toLowerCase()=='d'){
+                    depositar()
+
+                } else if (opt.toLowerCase()=='r'){
+                    sacar()
+                }
+
+                opt = prompt('Escolha uma operação para reaizar (R) Sacar dinheiro | (D) Depositar (S) Sair')
+
+
+            } 
+        } alert('Até Breve!')
+    </script>
+</body>
+
+</html>
