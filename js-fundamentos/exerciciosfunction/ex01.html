@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <script>
+        let temperatura = Number(prompt('Digite uma temperatura'))
+        let opt = Number(prompt('Se quiser a temperatura de Celsius para Farenheit digite 1. Caso queira de Farenheit para Celsius digite 2. Para sair digite 3'))
+
+        function celparaf() {
+            let f = temperatura * (9 / 5) + 32
+            return f
+        }
+
+        function fparacel() {
+            let c = (temperatura - 32) * (5 / 9)
+            return c
+        }
+        while (opt != 3) {
+            if (opt == 1) {
+                alert(celparaf())
+            } else {
+                alert(fparacel())
+            }
+            temperatura = Number(prompt('Digite uma temperatura'))
+            opt = Number(prompt('Se quiser a temperatura de Celsius para Farenheit digite 1. Caso queira de Farenheit para Celsius digite 2. Para sair digite 3'))
+        }
+    </script>
+</body>
+
+</html>

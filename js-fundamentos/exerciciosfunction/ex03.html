@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <script>
+        let num01 = Number(prompt('Digite o Primeiro valor'))
+        let num02 = Number(prompt('Digite o Segundo valor'))
+        let num03 = Number(prompt('Digite o Terceiro valor'))
+
+        function maior(n1, n2, n3) {
+            let maior = [n1, n2, n3]
+            let m = 0
+            for (let i in maior) {
+                if (maior[i] > m) {
+                    m = maior[i]
+                }
+            }
+            return m
+        }
+
+        function menor(n1, n2, n3) {
+            let menor = [n1, n2, n3]
+            let me = menor[0]
+
+            for (let i in menor) {
+                if (menor[i] < me) {
+                    me = menor[i]
+                }
+            }
+
+            return me
+        }
+
+        alert(`O maior número é ${maior(num01, num02, num03)} e o menor é ${menor(num01,num02,num03)}`)
+
+
+    </script>
+</body>
+
+</html>

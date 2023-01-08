@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado</title>
+
+    <style>
+        @font-face {
+            font-family: cyber;
+            src: url(/Cyberpunk.ttf);
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+
+
+        #contain {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(/1054256.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #dado {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+
+            top: 55%;
+            left: 50%;
+
+            transform: translate(-100px, -40px);
+        }
+
+        .botao {
+            position: relative;
+            font-family: cyber;
+            font-size: 30px;
+            width: 200px;
+            height: 60px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-image: linear-gradient(#5018d4 20%, #f72584d0);
+        }
+
+        #img {
+            position: absolute;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px white;
+            width: 200px;
+            height: 200px;
+            left: 49%;
+            top: 10%;
+
+            transform: translate(-86px);
+        }
+
+        #num {
+            display: inline-block;
+            font-size: 100px;
+            padding: 42px;
+            margin-right: 3px;
+        }
+
+        .botao:hover {
+            background-color: rgb(255, 0, 0);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contain">
+        <div id="img">
+            <p id="num">0</p>
+        </div>
+        <div id="dado">
+            <input type="button" value="1D10" class="botao" onclick="umd10()">
+            <input type="button" value="1D20" class="botao" onclick="umd20()">
+        </div>
+    </div>
+
+    <script>
+        let res = document.getElementById('num')
+        function umd10() {
+            let escolha = Math.random()
+            let choice = escolha * 10
+
+            res.innerHTML = choice.toFixed(0)
+
+        }
+        function umd20() {
+            let escolha = Math.random()
+            let choice = escolha * 20
+
+            res.innerHTML = choice.toFixed(0)
+        }
+    </script>
+</body>
+
+</html>
