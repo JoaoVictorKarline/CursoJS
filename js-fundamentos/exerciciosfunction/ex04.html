@@ -76,7 +76,7 @@
 
         .botao:hover {
             background-color: rgb(255, 0, 0);
-
+            pointer-events: ;
         }
     </style>
 </head>
@@ -98,7 +98,9 @@
         function umd10() {
             let escolha = Math.random()
             let choice = escolha * 10
-
+            if(choice <=0){
+                res.innerHTML = 1
+            }
             res.innerHTML = choice.toFixed(0)
 
         }
@@ -107,6 +109,8 @@
             let choice = escolha * 20
 
             res.innerHTML = choice.toFixed(0)
+
+            
         }
     </script>
 </body>
