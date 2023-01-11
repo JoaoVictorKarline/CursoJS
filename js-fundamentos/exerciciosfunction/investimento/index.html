@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimento</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #prin {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(/investimento/money.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        #contain {
+            position: absolute;
+            width: 500px;
+            height: 530px;
+            background-color: rgb(196, 196, 196);
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+            left: 53%;
+            top: 7%;
+        }
+
+        #inv {
+
+            height: 200px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .txt {
+            font-size: 2.0em;
+            padding: 10px;
+            text-align: center;
+            font-family: fantasy;
+            font-weight: lighter;
+        }
+
+        .res {
+            display: block;
+            background-color: rgb(29, 29, 29);
+            color: rgb(219, 216, 216);
+            width: 300px;
+            height: 110px;
+            font-size: 2.6em;
+            font-family: sans-serif;
+            text-align: center;
+            margin: auto;
+            padding: 23px;
+            margin-top: 25px;
+            border-radius: 10px;
+
+        }
+
+        #dados {
+            margin-top: -12px;
+            margin-left: 10px;
+            height: 230px;
+            padding: 20px;
+        }
+
+        .lab {
+            font-size: 30px;
+        }
+
+        #capin {
+            background-color: rgba(255, 255, 255, 0.452);
+            border: 1px solid rgba(0, 0, 0, 0.575);
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            height: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #txj {
+            background-color: rgba(255, 255, 255, 0.452);
+            border: 1px solid rgba(0, 0, 0, 0.575);
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            height: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #temp {
+            background-color: rgba(255, 255, 255, 0.452);
+            border: 1px solid rgba(0, 0, 0, 0.575);
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            height: 40px;
+            width: 150px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #ok {
+            display: block;
+            height: 40px;
+            width: 170px;
+            margin: auto;
+            font-size: 20px;
+            margin-top: 23px;
+            border: 1px solid rgba(0, 0, 0, 0.582);
+
+        }
+
+        #ok:hover {
+            background-color: rgba(184, 182, 182, 0.719);
+            cursor: pointer;
+        }
+
+        #ok:active{
+            height: 35px;
+            width: 160px;
+            margin-top: 30px;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.815)
+        }
+
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main id="prin">
+        <div id="contain">
+            <div id="inv">
+                <p class="txt">O retorno do Seu investimento é</p>
+                <div class="res">R$ 0</div>
+            </div>
+            <div id="dados">
+                <label for="capin" class="lab">Capital Inicial: </label>
+                <input type="number" name="cap" id="capin" placeholder="R$">
+                <label for="txj" class="lab">Taxa de Juros: </label>
+                <input type="number" name="tx" id="txj" placeholder="%">
+                <label for="temp" class="lab" style="font-size: 27px;">Tempo do Investimento: </label>
+                <input type="number" name="tem" id="temp" placeholder="Anos">
+                <input type="button" value="OK" id="ok" onclick="investimento()">
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let res = document.querySelector('.res')
+        res.innerHTML = 'R$ 0'
+        function investimento(){
+            let capital = document.getElementById('capin')
+            let cap = Number(capital.value)
+            let juros = document.getElementById('txj')
+            let jur = Number(juros.value)
+            let meses = document.getElementById('temp')
+            let mes = Number(meses.value)
+            let mont = 0
+            
+            if(cap == 0 || jur == 0 || mes == 0){
+                alert('Preencha todos os campos')
+            } 
+
+            jur = jur/100
+            mont = cap*(1+jur)**mes
+            res.innerHTML = `R$ ${mont.toFixed(2)}`
+            
+        }
+    </script>
+</body>
+
+</html>

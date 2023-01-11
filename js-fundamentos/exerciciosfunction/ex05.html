@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <style>
+        #butt{
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="num" id="num" placeholder="Insira um número">
+    <input type="button" value="Quadrado" onclick="quadrado()"> 
+    <input type="button" value="Cubo" onclick="cubo()">
+    <p id="butt"> = </p>
+    <script>
+        let res = document.getElementById('butt')
+
+        function quadrado(){
+            let num = document.getElementById('num')
+            let num_ = Number(num.value)
+            let qua = num_**2
+            alert (qua)
+
+        }
+
+        function cubo(){
+            let num = document.getElementById('num')
+            let num_ = Number(num.value)
+            let cub = num_**3
+            alert(cub)
+        }
+    </script>
+</body>
+</html>
