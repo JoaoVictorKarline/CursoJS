@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byclass</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            border: 4px solid black;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        div:hover{
+            border-color: blueviolet;
+        }
+
+        .c1{
+            background-color: rgba(0, 0, 0, 0.404);
+            color:  white;
+        }
+
+        .c2{
+            background-color: black;
+            color: white;
+    
+        }
+
+        .destaque{
+            background-color: blueviolet !important;
+            border: 4px solid black !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="cc1" class="c1">Java</div>
+    <div class="c1">JavaScript</div>
+    <div class="c1">Python</div>
+    <div class="c1">PHP</div>
+    <div class="c2">CSS</div>
+    <div class="c2">HTML</div>
+    <div class="c2">Mysql</div>
+    <div class="c2">React</div>
+
+    
+
+    <script>
+        let cursoc1 = [...document.getElementsByClassName('c1')]
+        let cursoc2 = [...document.getElementsByClassName('c2')]
+        let cursotot = cursoc1.concat(cursoc2)
+        let cursoespecial = document.getElementsByClassName('c1')[2] // Pega o índice específico
+
+
+        let queryall = [...document.querySelectorAll('div')] // Sem o All ele retorna o primeiro elemento da classe ou tag que eu informar
+        let queryc1 = [...document.querySelectorAll('.c1')]
+        let queryesp = document.querySelector('#cc1')
+        console.log(queryesp)
+        console.log(queryc1)
+        console.log(queryall)
+        
+        /*cursoc1.map((el)=>{
+            el.classList.add('destaque')
+        })*/
+    </script>
+</body>
+</html>

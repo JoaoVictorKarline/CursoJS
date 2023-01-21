@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byid</title>
+</head>
+<body>
+    <div id="c1">JS</div>
+    <div id="c2">HTML</div>
+    <div id="c3">CSS</div>
+    <div id="c4">React</div>
+    <div id="c5">Java</div>
+
+    <script>
+        let dc1 = document.getElementById('c1')
+        let dc2 = document.getElementById('c2')
+        let dc3 = document.getElementById('c3')
+        let dc4 = document.getElementById('c4')
+        let dc5 = document.getElementById('c5')
+        
+        let arrayelements = [dc1,dc2,dc3,dc4,dc5]
+        console.log(arrayelements)
+
+        for(let i in arrayelements){
+            arrayelements[i].innerHTML = 'Mys' 
+        }
+
+        let colecao = [...document.getElementsByTagName('div')]
+        console.log(colecao)
+
+
+    </script>
+</body>
+</html>

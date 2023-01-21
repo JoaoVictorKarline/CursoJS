@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom01</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.61);
+            color: white;
+            font: normal 30px arial;
+        }
+        .contain{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <h1 id="dom">Iniciando DOM</h1>
+        <p class="res">Resultado: </p>
+        <p class="res">Dom em Js</p>
+        <div id="click">Click</div>
+    </div>
+
+    <script>
+        // Seletores
+        let body = document.body
+        let p1 = document.getElementsByTagName('p')[0] // Pega todos os elementos p
+        document.write(p1.innerHTML) // Exibe no documento o html interno do p1(Com o texto e as tags)
+        p1.style.color = 'blue'
+        body.style.backgroundColor = 'black'
+
+        let clicar= document.getElementById('click')
+        clicar.style.background = 'yellow'
+
+        // Queryselector é mais recomendavel
+
+        let res = document.querySelector('#dom')
+        res.style.color = 'green'
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS DOM</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.486);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+    
+        }
+        #area{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: yellow;
+            color: rgb(15, 15, 15);
+            font-size: 1.7em;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">Interaja</div>
+    <script>
+        function clicar(){
+            let a = document.querySelector('#area')
+            a.innerHTML = 'Clicou'
+            a.style.background = 'red'
+            
+        }
+
+        function entrar(){
+            let a = document.querySelector('#area')
+            a.innerHTML = 'Entrou'
+            a.style.background = 'green'
+        }
+
+        function saiu(){
+            let a = document.querySelector('#area')
+            a.innerHTML = 'Saiu'
+            a.style.background = 'yellow'
+        }
+    </script>
+</body>
+</html>
