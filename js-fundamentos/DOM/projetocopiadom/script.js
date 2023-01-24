@@ -3,6 +3,7 @@ let divconteudo = [...document.querySelectorAll('.bt')]
 console.log(divconteudo)
 let divright = document.querySelector('.containerright')
 let divleft = document.querySelector('.containerleft')
+let buttongroup = document.querySelector('.buttongroup')
 
 divconteudo.map((ele)=>{
     ele.addEventListener("click", function elclick(evt){
@@ -21,7 +22,13 @@ but.addEventListener("click", ()=>{
     selecionados.map((ele)=>{
         divright.appendChild(ele)
         divright.style.flexDirection = 'column'
+
     })
+
+    
+    
+
+    
 
     
 
