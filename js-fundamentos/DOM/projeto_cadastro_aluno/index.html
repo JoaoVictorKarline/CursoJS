@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="divheader">
+            <h1 id="titlecadastro">Cadastro Alunos</h1>
+        </div>
+    </header>
+        <main class="principal">
+            <div class="divtabela">
+                <table id="tabela">
+                    <caption>Lista de Alunos</caption>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Trabalho</th>
+                            <th>Prova</th>
+                            <th>Média</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpotab">
+                        <tr>
+                            <td>João</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Maria</td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="divformulario">
+                <div class="tituloform">
+                    <h1>Cadastro de Alunos</h1>
+                </div>
+                <form action="" method="get">
+                    
+                    <div class="divinputs">
+                        <label for="inome">Nome</label>
+                        <input type="text" name="nome" id="inome" required>
+                    </div>
+                    <div class="divinputs">
+                        <label for="inotatrab">Nota Trabalho</label>
+                        <input type="number" name="notat" id="inotatrab" required min="1" max="10">
+                    </div>
+                    <div class="divinputs">
+                        <label for="inotaprova">Nota Prova</label>
+                        <input type="number" name="notap" id="inotaprova" required>
+                    </div>
+                    <div class="botao">
+                        <input type="button" value="Salvar" id="but">
+                    </div>
+                </form>
+            </div>
+        </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

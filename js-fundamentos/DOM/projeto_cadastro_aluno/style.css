@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+   
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #091B40;
+    height: 100px;
+}
+
+.divheader{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+#titlecadastro{
+    margin-left: 130px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F25E7A;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+main{
+    background-color: rgba(165, 163, 163, 0.233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+
+.divtabela{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+
+}
+
+table{
+    background-color: aqua;
+    font-size: 25px;
+    border: 3px solid black;
+    width: 90%;
+}
+
+caption{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    color: #010A26;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+thead{
+    background-color: purple;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 40px;
+    height: 50px;
+}
+
+tbody{
+    background-color: white;
+}
+
+td{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table, thead, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.divformulario{
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+form{
+    margin: auto;
+    width: 100%;
+}
+
+.tituloform{
+    display: block;
+    width: 43%;
+    text-align: center;
+}
+
+.divinputs{
+    display: inline-block;
+    margin-left: 90px;
+    margin-top: 10px;
+    
+}
+
+label{
+    display: block;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 18px;
+}
+
+input:focus-visible {
+    outline: 0px solid rgba(255, 255, 255, 0);
+}
+
+input:active{
+    border: 1px solid black;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#but{
+    cursor: pointer;
+    background-color: #091B40;
+    color: white;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    
+}
+
+#but:hover{
+    background-color: #12347a;
+}
+
