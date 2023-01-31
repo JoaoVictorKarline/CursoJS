@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: aqua;
+        }
+
+        .box {
+            width: 90%;
+            height: 70px;
+            background-color: gray;
+            margin-bottom: 10px;
+        }
+
+        .botao {
+            width: 70px;
+            height: 50px;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label for="">Valor 1</label>
+        <input type="number" name="numero" id="inumero">
+    </div>
+    <div class="box">
+        <label for="">Valor 2</label>
+        <input type="number" name="numero" id="inumero2">
+    </div>
+    <div class="box" id="res">Resultado: </div>
+    <div class="but">
+        <input type="button" value="+" class="botao" id="soma">
+        <input type="button" value="-" class="botao" id="sub">
+        <input type="button" value="X" class="botao" id="multi">
+        <input type="button" value="/" class="botao" id="divisao">
+    </div>
+    <script>
+        let botao_soma = document.querySelector('#soma')
+        let botao_sub = document.querySelector('#sub')
+        let botao_multi = document.querySelector('#multi')
+        let botao_divisao = document.querySelector('#divisao')
+        let resultado = document.querySelector('#res')
+        
+        let operacoes = [
+            () => {
+                let valores = [document.querySelector('#inumero').value, document.querySelector('#inumero2').value]
+                resultado.textContent = Number(valores[0]) + Number(valores[1])
+
+            },
+
+            () => {
+                let valores = [document.querySelector('#inumero').value, document.querySelector('#inumero2').value]
+                resultado.textContent = Number(valores[0]) - Number(valores[1])
+            },
+
+            () => {
+                let valores = [document.querySelector('#inumero').value, document.querySelector('#inumero2').value]
+                resultado.textContent = Number(valores[0]) * Number(valores[1])
+            },
+
+            () => {
+                let valores = [document.querySelector('#inumero').value, document.querySelector('#inumero2').value]
+                resultado.textContent = Number(valores[0]) / Number(valores[1])
+            },
+        ]
+
+        botao_soma.addEventListener("click", operacoes[0])
+        botao_sub.addEventListener("click",operacoes[1])
+        botao_multi.addEventListener("click", operacoes[2])
+        botao_divisao.addEventListener("click", operacoes[3])
+
+    </script>
+</body>
+
+</html>

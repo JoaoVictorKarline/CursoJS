@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: aqua;
+        }
+
+        .box {
+            width: 90%;
+            height: 70px;
+            background-color: gray;
+            margin-bottom: 10px;
+        }
+
+        .botao {
+            width: 70px;
+            height: 50px;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label for="">Valor 1</label>
+        <input type="number" name="numero" id="inumero">
+    </div>
+    <div class="box">
+        <label for="">Valor 2</label>
+        <input type="number" name="numero" id="inumero2">
+    </div>
+    <div class="box" id="res">Resultado: </div>
+    <div class="but">
+        <input type="button" value="+" class="botao" id="soma">
+        <input type="button" value="-" class="botao" id="sub">
+        <input type="button" value="X" class="botao" id="multi">
+        <input type="button" value="/" class="botao" id="divisao">
+    </div>
+    <script>
+        let corpo = document.body
+        let mapa = new Map()
+        mapa.set("curso", "Javascript") //Adicionar elementos por chave e valor (A chave diferente do indice pode ser qualquer valor)
+        mapa.set("10", "João") // As chaves não podem repetir
+        mapa.set(10,100)
+        mapa.set(20,"Olá")
+
+        console.log(mapa)
+        if(mapa.has("10")){
+            corpo.innerHTML = "A chave existe na coleção"
+        } else {
+            corpo.innerHTML = 'A chave não existe'
+        }
+        //corpo.innerHTML = mapa.get(10) // Obter o valor da chave curso
+        // Usa o Map quando eu quero armazenar dados diferentes entre si (Strings, inteiros, boolean) diferente do array que só permite um tipo de dado
+
+        mapa.forEach((ele)=>{
+            console.log(ele)
+        })
+    </script>
+</body>
+
+</html>
